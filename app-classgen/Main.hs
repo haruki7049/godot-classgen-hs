@@ -2,6 +2,7 @@ import Classgen.Module
 import Classgen.Spec
 import Control.Lens
 import Control.Monad.State
+import Control.Monad (when)
 import Data.Maybe (mapMaybe)
 import Data.Aeson
 import qualified Data.ByteString.Lazy as BL

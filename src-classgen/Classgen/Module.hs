@@ -3,6 +3,7 @@ module Classgen.Module where
 
 import Control.Lens hiding (index)
 import Control.Applicative
+import Control.Monad (when)
 import Control.Monad.State
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HM
