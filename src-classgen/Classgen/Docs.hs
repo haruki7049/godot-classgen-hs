@@ -103,10 +103,6 @@ data GodotDoc = GodotDoc {
   _gdClass :: !GodotDocClass
   } deriving (Show, Eq)
 
-instance FromJSON GodotDoc where
-  parseJSON (Object x) = GodotDoc <$> x .: "class"
-  parseJSON _ = fail "Expected an Object"
-
 data OptionalArray a = OptionalArray { unOption :: Vector a }
   deriving (Show, Eq)
 
@@ -184,6 +180,10 @@ concat <$> mapM (deriveFromJSON defaultOptions { fieldLabelModifier = quietSnake
   , ''GodotConstant
   , ''GodotSignal
   , ''GodotMethod ]
+
+instance FromJSON GodotDoc where
+  parseJSON (Object x) = GodotDoc <$> x .: "class"
+  parseJSON _ = fail "Expected an Object"
 
 convertDoc = T.replace "]" "@" . T.replace "[" "@"
            . T.replace "[/code]" "@" . T.replace "[code]" "@"
