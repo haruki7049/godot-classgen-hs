@@ -3,10 +3,32 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    commit: 3c68481a457d37d3b610cb4c745d07f85ae9bba7
+    git: https://github.com/KaneTW/haskell-src-exts-qq.git
+    name: haskell-src-exts-qq
+    pantry-tree:
+      sha256: 2ba626ea2a030077b5d9ccebf4aaffb5c667f7c76a24ba7a903ff62a3efafe1f
+      size: 436
+    version: '0.8'
+  original:
+    commit: 3c68481a457d37d3b610cb4c745d07f85ae9bba7
+    git: https://github.com/KaneTW/haskell-src-exts-qq.git
+- completed:
+    commit: cc0e0f8e86814519281805da610d87cc34c86bea
+    git: https://github.com/achirkin/haskell-src-exts-sc.git
+    name: haskell-src-exts-sc
+    pantry-tree:
+      sha256: 15f76926a73bc7745ae6d5eca0bad30de888f7ac60fdb652f5716ffcd455656a
+      size: 516
+    version: 0.1.0.6
+  original:
+    commit: cc0e0f8e86814519281805da610d87cc34c86bea
+    git: https://github.com/achirkin/haskell-src-exts-sc.git
 snapshots:
 - completed:
+    sha256: bc60043a06b58902b533baa80fb566c0ec495c41e428bc0f8c1e8c15b2a4c468
     size: 491163
     url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/15/4.yaml
-    sha256: bc60043a06b58902b533baa80fb566c0ec495c41e428bc0f8c1e8c15b2a4c468
   original: lts-15.4

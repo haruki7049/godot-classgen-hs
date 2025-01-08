@@ -38,12 +38,14 @@ resolver: lts-15.4
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - .
-- ../haskell-src-exts-qq
-- ../haskell-src-exts-sc
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: []
+extra-deps:
+- git: https://github.com/KaneTW/haskell-src-exts-qq.git
+  commit: 3c68481a457d37d3b610cb4c745d07f85ae9bba7
+- git: https://github.com/achirkin/haskell-src-exts-sc.git
+  commit: cc0e0f8e86814519281805da610d87cc34c86bea
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
