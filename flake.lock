@@ -56,7 +56,23 @@
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
+        "stacklock2nix": "stacklock2nix",
         "systems": "systems"
+      }
+    },
+    "stacklock2nix": {
+      "locked": {
+        "lastModified": 1731366632,
+        "narHash": "sha256-dd10Hyqbyhg83pgxE8Sl1jo9wdYzTU4muH83TjhyrCY=",
+        "owner": "cdepillabout",
+        "repo": "stacklock2nix",
+        "rev": "3cb77e9c869be90ad939f368096ff2cc940881d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cdepillabout",
+        "repo": "stacklock2nix",
+        "type": "github"
       }
     },
     "systems": {
