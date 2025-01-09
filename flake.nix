@@ -21,7 +21,7 @@
           overlays = [
             inputs.stacklock2nix.overlay
             (final: prev: {
-              classgen = final.stacklock2nix {
+              classgen-stacklock = final.stacklock2nix {
                 stackYaml = ./stack.yaml;
                 baseHaskellPkgSet = final.haskell.packages.ghc984;
 
@@ -59,10 +59,10 @@
           };
 
           packages = {
-            default = pkgs.classgen.pkgSet.godot-haskell-classgen;
+            default = pkgs.classgen-stacklock.pkgSet.godot-haskell-classgen;
           };
 
-          devShells.default = pkgs.classgen.devShell;
+          devShells.default = pkgs.classgen-stacklock.devShell;
         };
     };
 }
