@@ -35,9 +35,6 @@
                 };
 
                 additionalHaskellPkgSetOverrides = hfinal: hprev: {
-                  primitive = final.haskell.lib.compose.dontCheck hprev.primitive;
-                  uuid-types = final.haskell.lib.compose.dontCheck hprev.uuid-types;
-                  case-insensitive = final.haskell.lib.compose.dontCheck hprev.case-insensitive;
                   integer-logarithms = final.haskell.lib.compose.dontCheck hprev.integer-logarithms;
                   prettyprinter = final.haskell.lib.compose.dontCheck hprev.prettyprinter;
                   indexed-traversable-instances = final.haskell.lib.compose.dontCheck hprev.indexed-traversable-instances;
