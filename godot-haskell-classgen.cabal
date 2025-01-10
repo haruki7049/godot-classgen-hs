@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 39c1a53600a03266968c43ac408d7e7fa662a399a936ee5fa12573f2b06d247a
+-- hash: 30bed42841e8b4238cb4861df459c1df3262dfa42afa881892d1d047b361c7eb
 
 name:           godot-haskell-classgen
 version:        0.1.0.0
@@ -15,6 +15,7 @@ author:         David Kraeutmann
 maintainer:     kane@kane.cx
 copyright:      2018 David Kraeutmann
 license:        BSD3
+license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
