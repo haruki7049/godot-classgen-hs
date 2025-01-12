@@ -25,10 +25,6 @@ dependencies:
 build-tools:
 - c2hs
 
-include-dirs:
-- godot_headers
-- cbits
-
 default-extensions:
 - FlexibleContexts
 - FlexibleInstances

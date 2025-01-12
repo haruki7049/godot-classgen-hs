@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 30bed42841e8b4238cb4861df459c1df3262dfa42afa881892d1d047b361c7eb
+-- hash: b49a0af32571e4f96bdd09e9be54914e179ea34991deb6b82a6c55d14253b3c2
 
 name:           godot-haskell-classgen
 version:        0.1.0.0
@@ -52,9 +52,6 @@ library
       OverloadedStrings
       PatternSynonyms
       GeneralizedNewtypeDeriving
-  include-dirs:
-      godot_headers
-      cbits
   build-tools:
       c2hs
   build-depends:
@@ -98,9 +95,6 @@ executable godot-haskell-classgen
       OverloadedStrings
       PatternSynonyms
       GeneralizedNewtypeDeriving
-  include-dirs:
-      godot_headers
-      cbits
   build-tools:
       c2hs
   build-depends:
