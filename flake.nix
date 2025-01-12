@@ -8,12 +8,19 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import inputs.systems;
+      imports = [
+        inputs.treefmt-nix.flakeModule
+      ];
 
       perSystem =
         { pkgs, system, ... }:
@@ -30,9 +37,12 @@
                   final.nil
                 ];
 
-                cabal2nixArgsOverrides = args: args // {
-                  prettyprinter = version: { pgp-wordlist = null; };
-                };
+                cabal2nixArgsOverrides =
+                  args:
+                  args
+                  // {
+                    prettyprinter = version: { pgp-wordlist = null; };
+                  };
 
                 additionalHaskellPkgSetOverrides = hfinal: hprev: {
                   integer-logarithms = final.haskell.lib.compose.dontCheck hprev.integer-logarithms;
@@ -54,6 +64,13 @@
           _module.args.pkgs = import inputs.nixpkgs {
             inherit system overlays;
             config.allowBroken = true;
+          };
+
+          treefmt = {
+            projectRootFile = "flake.nix";
+            programs.nixfmt.enable = true;
+            programs.ormolu.enable = true;
+            programs.mdformat.enable = true;
           };
 
           packages = {
