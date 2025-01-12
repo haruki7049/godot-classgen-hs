@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b49a0af32571e4f96bdd09e9be54914e179ea34991deb6b82a6c55d14253b3c2
+-- hash: 64d4a5aade4eb5c85ee91dac5aafb81dc1999dc1ec09b52cf45f392c599fca42
 
 name:           godot-haskell-classgen
 version:        0.1.0.0
@@ -47,7 +47,8 @@ library
       TypeFamilies
       TemplateHaskell
       TypeOperators
-      TypeInType
+      DataKinds
+      PolyKinds
       QuasiQuotes
       OverloadedStrings
       PatternSynonyms
@@ -90,7 +91,8 @@ executable godot-haskell-classgen
       TypeFamilies
       TemplateHaskell
       TypeOperators
-      TypeInType
+      DataKinds
+      PolyKinds
       QuasiQuotes
       OverloadedStrings
       PatternSynonyms

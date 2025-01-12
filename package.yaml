@@ -38,7 +38,8 @@ default-extensions:
 - TypeFamilies
 - TemplateHaskell
 - TypeOperators
-- TypeInType
+- DataKinds
+- PolyKinds
 - QuasiQuotes
 - OverloadedStrings
 - PatternSynonyms
